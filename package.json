@@ -1,4 +1,10 @@
 {
+    "name": "street-movies",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/moniquedsilva/street-movies.git",
+    "author": "Monique Silva <moniquesntsilva@gmail.com>",
+    "license": "MIT",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -14,5 +20,6 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
-    }
+    },
+    "dependencies": {}
 }
