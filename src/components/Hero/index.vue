@@ -27,7 +27,7 @@ export default {
     vote_average: Number,
     release_date: String,
   },
-  data: function () {
+  data() {
     return {
       year: '',
     }
