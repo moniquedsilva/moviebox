@@ -1,5 +1,9 @@
 <template>
-  <header>Headeeer</header>
+  <header class="absolute">
+    <a href="/">
+      <img src="assets/logo.svg" alt="Logo" />
+    </a>
+  </header>
 </template>
 
 <script>

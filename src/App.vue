@@ -9,20 +9,24 @@
     ></div>
     <span class="visually-hidden text-3xl text-gray-900">Loading...</span>
   </div>
-  <div v-else>
+  <div v-else class="font-DM">
     <Header />
-    <Carousel v-bind="info[0]" />
+    <Hero v-bind="info[0]" />
     <main>
-      <section>
-        <h2>Featured Movie</h2>
-        <div v-for="movie in info" :key="movie.id">
-          <Movies v-bind="movie" />
+      <section class="mx-auto py-16 w-11/12">
+        <h2 class="text-4xl font-bold w-full mb-11">Featured Movie</h2>
+        <div class="flex gap-x-20 overflow-x-auto">
+          <div v-for="movie in info" :key="movie.id">
+            <Movies v-bind="movie" />
+          </div>
         </div>
       </section>
-      <section>
-        <h2>New Arrival</h2>
-        <div v-for="movie in currentYear" :key="movie.id">
-          <Movies v-bind="movie" />
+      <section class="mx-auto py-16 w-11/12">
+        <h2 class="text-4xl font-bold w-full mb-11">New Arrival</h2>
+        <div class="flex gap-x-20 overflow-x-auto">
+          <div v-for="movie in currentYear" :key="movie.id">
+            <Movies v-bind="movie" />
+          </div>
         </div>
       </section>
     </main>
@@ -32,13 +36,13 @@
 <script>
 import axios from 'axios'
 import Header from '@/components/Header'
-import Carousel from '@/components/Carousel'
+import Hero from '@/components/Hero'
 import Movies from '@/components/Movies'
 
 export default {
   components: {
     Header,
-    Carousel,
+    Hero,
     Movies,
   },
   data() {
