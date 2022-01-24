@@ -6,7 +6,9 @@ MovieBox it's a project that simulates a movie themed website
 
 ### Preview
 
-[Page](https://mss-moviebox.netlify.app/)
+![screenshot](./public/assets/Screenshot-MovieBox.png)
+
+[Live Site](https://mss-moviebox.netlify.app/)
 
 ---
 
@@ -15,7 +17,7 @@ MovieBox it's a project that simulates a movie themed website
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [Vue](https://v3.vuejs.org/)
+- [Vue](https://vuejs.org/)
 - [Tailwind](https://tailwindcss.com/)
 
 ---
