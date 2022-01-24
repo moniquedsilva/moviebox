@@ -2,7 +2,7 @@
   <header
     class="bg-black md:bg-bg h-56 md:h-16 w-full md:absolute flex flex-col md:flex-row gap-x-8 items-center justify-center md:justify-around"
   >
-    <a href="/">
+    <a href="/#home">
       <img src="assets/logo.svg" alt="Logo" />
     </a>
     <nav class="flex flex-col md:flex-row gap-x-16 items-center text-white">

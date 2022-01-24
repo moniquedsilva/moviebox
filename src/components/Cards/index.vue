@@ -5,7 +5,7 @@
     </h2>
     <img
       :src="'https://image.tmdb.org/t/p/w500/' + this.poster_path"
-      :alt="title"
+      :alt="title || original_name"
       class="order-1"
     />
     <div class="order-4 text-justify">

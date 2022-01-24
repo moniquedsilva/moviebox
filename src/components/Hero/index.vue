@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-col items-center md:items-start justify-center">
+  <section
+    id="home"
+    class="flex flex-col items-center md:items-start justify-center"
+  >
     <div
       class="absolute w-2/5 lg:w-1/3 ml-8 lg:ml-24 text-white text-center md:text-left z-10 space-y-4"
     >
