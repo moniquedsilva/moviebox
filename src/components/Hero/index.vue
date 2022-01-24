@@ -1,10 +1,12 @@
 <template>
-  <section class="flex flex-col justify-center">
-    <div class="absolute w-1/3 ml-24 text-white text-center z-10 space-y-4">
-      <h1 class="font-bold text-5xl">
+  <section class="flex flex-col items-center md:items-start justify-center">
+    <div
+      class="absolute w-2/5 lg:w-1/3 ml-8 lg:ml-24 text-white text-center md:text-left z-10 space-y-4"
+    >
+      <h1 class="font-bold text-4xl lg:text-5xl">
         {{ title }}
       </h1>
-      <div class="flex justify-center gap-x-8 font-bold">
+      <div class="flex justify-center md:justify-start gap-x-8 font-bold">
         <span>{{ getYear(release_date) }}</span>
         <span class="flex gap-x-2 justify-center items-center"
           ><svg
@@ -25,7 +27,7 @@
           {{ vote_average }}</span
         >
       </div>
-      <p class="text-lg">
+      <p class="text-md lg:text-lg">
         {{ overview }}
       </p>
     </div>
