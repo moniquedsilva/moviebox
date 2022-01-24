@@ -26,7 +26,7 @@ MovieBox it's a project that simulates a movie themed website
 $ node -v
 
 # Clone this repository
-$ git clone https://gitlab.potelo.com.br/moniquesilva/moviebox.git
+$ git clone https://github.com/moniquedsilva/moviebox.git
 
 # Open the project folder
 $ cd .\moviebox\
