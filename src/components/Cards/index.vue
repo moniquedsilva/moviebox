@@ -16,7 +16,7 @@
         >[...]</span
       >
       <span
-        class="block underline text-red-600"
+        class="block underline text-red-600 cursor-pointer"
         v-if="!readMoreActivated && overview.length > 200"
         @click="activateReadMore"
       >
