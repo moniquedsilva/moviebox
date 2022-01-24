@@ -9,30 +9,30 @@
     ></div>
     <span class="visually-hidden text-3xl text-gray-900">Loading...</span>
   </div>
-  <div v-else class="font-DM">
+  <div v-else class="font-DMsans">
     <Header />
     <div class="hidden md:block">
       <Hero v-bind="info[0]" />
     </div>
     <main>
-      <section id="featured" class="mx-auto pt-16 pb-8 w-11/12">
-        <h2 class="text-4xl font-bold w-full mb-11">Featured Movie</h2>
+      <section id="featured" class="w-11/12 mx-auto pt-16 pb-8">
+        <h2 class="w-full mb-11 text-4xl font-bold">Featured Movie</h2>
         <div class="flex gap-x-20 overflow-x-auto scroll">
           <div v-for="movie in info" :key="movie.id">
             <Cards v-bind="movie" />
           </div>
         </div>
       </section>
-      <section id="new-arrival" class="mx-auto py-8 w-11/12">
-        <h2 class="text-4xl font-bold w-full mb-11">New Arrival</h2>
+      <section id="new-arrival" class="w-11/12 mx-auto py-8">
+        <h2 class="w-full mb-11 text-4xl font-bold">New Arrival</h2>
         <div class="flex gap-x-20 overflow-x-auto scroll">
           <div v-for="movie in currentYear" :key="movie.id">
             <Cards v-bind="movie" />
           </div>
         </div>
       </section>
-      <section id="tv-show" class="mx-auto pt-8 pb-16 w-11/12">
-        <h2 class="text-4xl font-bold w-full mb-11">TV Shows</h2>
+      <section id="tv-show" class="w-11/12 mx-auto pt-8 pb-16">
+        <h2 class="w-full mb-11 text-4xl font-bold">TV Shows</h2>
         <div class="flex gap-x-20 overflow-x-auto scroll">
           <div v-for="movie in tvShow" :key="movie.id">
             <Cards v-bind="movie" />
@@ -95,6 +95,11 @@ export default {
 </script>
 
 <style scoped>
+.scroll {
+  scrollbar-color: rgb(17, 24, 39) rgb(226, 226, 226);
+  scrollbar-width: thin;
+}
+
 .scroll::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgb(226, 226, 226);
   border-radius: 20px;

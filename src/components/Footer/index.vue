@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-black h-9 flex items-center text-center justify-center text-white"
+    class="h-9 flex items-center text-center justify-center bg-black text-white"
   >
     <div>
       Developed by
@@ -15,9 +15,3 @@
     </div>
   </footer>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style></style>

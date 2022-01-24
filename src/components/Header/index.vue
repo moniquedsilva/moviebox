@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-black md:bg-bg h-56 md:h-16 w-full md:absolute flex flex-col md:flex-row gap-x-8 items-center justify-center md:justify-around"
+    class="h-56 md:h-16 w-full flex flex-col md:flex-row gap-x-8 items-center justify-center md:justify-around md:absolute bg-black md:bg-darkTransparent"
   >
     <a href="/#home">
       <img src="assets/logo.svg" alt="Logo" />
@@ -12,10 +12,6 @@
     </nav>
   </header>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style scoped>
 .links {

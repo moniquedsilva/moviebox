@@ -1,6 +1,6 @@
 <template>
-  <article class="w-60 flex flex-col gap-y-3 mb-4">
-    <h2 class="order-3 text-xl text-gray-900 font-bold">
+  <article class="flex flex-col gap-y-3 w-60 mb-4">
+    <h2 class="order-3 font-bold text-xl text-gray-900">
       {{ title || original_name }}
     </h2>
     <img
@@ -37,7 +37,7 @@
           focusable="false"
           data-prefix="fas"
           data-icon="star"
-          class="text-yellow-400 w-4"
+          class="w-4 text-yellow-400"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
@@ -56,7 +56,6 @@
 <script>
 export default {
   props: {
-    id: Number,
     poster_path: String,
     genre_ids: Array,
     title: String,

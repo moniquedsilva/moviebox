@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        bg: '#00000080',
+        darkTransparent: '#00000080',
       },
       fontFamily: {
-        DM: "'DM Sans', sans-serif",
+        DMsans: "'DM Sans', sans-serif",
       },
     },
   },

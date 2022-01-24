@@ -4,7 +4,7 @@
     class="flex flex-col items-center md:items-start justify-center"
   >
     <div
-      class="absolute w-2/5 lg:w-1/3 ml-8 lg:ml-24 text-white text-center md:text-left z-10 space-y-4"
+      class="w-2/5 lg:w-1/3 absolute ml-8 lg:ml-24 space-y-4 text-white text-center md:text-left z-10"
     >
       <h1 class="font-bold text-4xl lg:text-5xl">
         {{ title }}
@@ -17,7 +17,7 @@
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="text-yellow-400 w-4"
+            class="w-4 text-yellow-400"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -44,7 +44,6 @@
 <script>
 export default {
   props: {
-    id: Number,
     backdrop_path: String,
     title: String,
     overview: String,
