@@ -1,15 +1,29 @@
-# MovieBox
+<h1 align = "center"> :clapper: MovieBox
 
-MovieBox it's a project that simulates a movie themed website
 
-## Preview
+<p align="center"> 
+    <img alt = "Languages" src="https://img.shields.io/github/languages/count/moniquedsilva/moviebox">
+    <img alt = "Tamanho" src="https://img.shields.io/github/repo-size/moniquedsilva/moviebox">
+    <img alt = "Commit" src="https://img.shields.io/github/last-commit/moniquedsilva/moviebox">
+    <img alt = "Issues" src="https://img.shields.io/github/issues/moniquedsilva/moviebox">
+</p>
+
+<p align="center"> 
+    <a href="#film_strip-preview">Preview</a>          |
+    <a href="#rocket-technology">Technology</a>          |
+    <a href="#hammer-run-this-project">Installation</a>
+</p>
+
+### MovieBox it's a project that simulates a movie themed website
+
+## :film_strip: Preview
 
 ![screenshot](./public/assets/Screenshot-MovieBox.png)
 
 ### [Live Site](https://mss-moviebox.netlify.app/)
 
 
-## Technology
+## :rocket: Technology
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
@@ -19,7 +33,7 @@ MovieBox it's a project that simulates a movie themed website
 - [Vue](https://vuejs.org/)
 
 
-## Run this project
+## :hammer: Run this project
 ```bash 
 # You need to have a node on your machine to run the project
 # Don't remember if you own the knot? Run node -v on your terminal
