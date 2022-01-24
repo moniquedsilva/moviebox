@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundColor: {
+        bg: '#00000080',
+      },
       fontFamily: {
         DM: "'DM Sans', sans-serif",
       },
