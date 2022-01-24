@@ -11,25 +11,36 @@
   </div>
   <div v-else class="font-DM">
     <Header />
-    <Hero v-bind="info[0]" />
+    <div class="hidden md:block">
+      <Hero v-bind="info[0]" />
+    </div>
     <main>
-      <section class="mx-auto py-16 w-11/12">
+      <section id="featured" class="mx-auto pt-16 pb-8 w-11/12">
         <h2 class="text-4xl font-bold w-full mb-11">Featured Movie</h2>
-        <div class="flex gap-x-20 overflow-x-auto">
+        <div class="flex gap-x-20 overflow-x-auto scroll">
           <div v-for="movie in info" :key="movie.id">
-            <Movies v-bind="movie" />
+            <Cards v-bind="movie" />
           </div>
         </div>
       </section>
-      <section class="mx-auto py-16 w-11/12">
+      <section id="new-arrival" class="mx-auto py-8 w-11/12">
         <h2 class="text-4xl font-bold w-full mb-11">New Arrival</h2>
-        <div class="flex gap-x-20 overflow-x-auto">
+        <div class="flex gap-x-20 overflow-x-auto scroll">
           <div v-for="movie in currentYear" :key="movie.id">
-            <Movies v-bind="movie" />
+            <Cards v-bind="movie" />
+          </div>
+        </div>
+      </section>
+      <section id="tv-show" class="mx-auto pt-8 pb-16 w-11/12">
+        <h2 class="text-4xl font-bold w-full mb-11">TV Shows</h2>
+        <div class="flex gap-x-20 overflow-x-auto scroll">
+          <div v-for="movie in tvShow" :key="movie.id">
+            <Cards v-bind="movie" />
           </div>
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -37,19 +48,21 @@
 import axios from 'axios'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Movies from '@/components/Movies'
+import Cards from '@/components/Cards'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
     Header,
     Hero,
-    Movies,
+    Cards,
+    Footer,
   },
   data() {
     return {
       info: null,
       loading: true,
-      video: null,
+      tvShow: null,
     }
   },
   mounted() {
@@ -58,6 +71,15 @@ export default {
         'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1'
       )
       .then((response) => (this.info = response.data.results))
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => (this.loading = false))
+    axios
+      .get(
+        'https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1'
+      )
+      .then((response) => (this.tvShow = response.data.results))
       .catch((error) => {
         console.log(error)
       })
@@ -71,3 +93,27 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(226, 226, 226);
+  border-radius: 20px;
+  background-color: rgb(226, 226, 226);
+  overflow-x: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgb(226, 226, 226);
+  overflow-x: auto;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(17, 24, 39);
+  overflow-x: auto;
+}
+</style>
