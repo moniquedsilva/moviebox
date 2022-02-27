@@ -133,19 +133,19 @@ export default {
   cursor: pointer;
 }
 
-.nav__button {
+.nav__links:after {
+  content: "";
   display: block;
-  width: 140px;
-  border-radius: 1.875rem;
+  transition: all ease-in-out 0.3s;
+  background: none repeat scroll 0 0 rgb(220, 20, 60);
+  height: 4px;
+  border-radius: 20px;
+  width: 0;
   margin: 0 auto;
-  padding: 18px 0;
-  background-color: whitesmoke;
-  font: 1rem;
-  color: blue;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease-in;
+}
+.nav__links:hover:after {
+  width: 100%;
+  padding-right: 35px;
 }
 
 @media (min-width: 48em) {
@@ -186,9 +186,6 @@ export default {
   }
   .nav__links {
     color: #fff;
-  }
-  .nav__links:hover {
-    transform: scale(1.1);
   }
   .nav__button {
     background-color: #fff;
