@@ -19,9 +19,12 @@
         >
           <ul class="nav__list w-full text-center">
             <li v-for="link in links" :key="link.id">
-              <a :href="link.local" class="nav__links m-auto">{{
-                link.name
-              }}</a>
+              <a
+                :href="link.local"
+                @click="isActive = false"
+                class="nav__links m-auto"
+                >{{ link.name }}</a
+              >
             </li>
           </ul>
         </div>
@@ -55,8 +58,6 @@ export default {
 <style scoped>
 .header {
   width: 100%;
-  position: absolute;
-  z-index: 10;
 }
 
 .header__content {
@@ -100,6 +101,7 @@ export default {
 }
 
 .nav__menu {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +151,11 @@ export default {
 }
 
 @media (min-width: 48em) {
+  .header {
+    position: absolute;
+    z-index: 10;
+  }
+
   .header__content {
     flex-direction: row;
     justify-content: space-between;
@@ -167,6 +174,7 @@ export default {
     width: max-content;
   }
   .nav__menu {
+    position: static;
     height: auto !important;
     width: max-content;
     background-color: transparent;
