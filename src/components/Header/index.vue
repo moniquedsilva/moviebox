@@ -62,26 +62,25 @@ export default {
 
 .header__content {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  flex-direction: column;
   width: 100%;
+  margin: 0 auto;
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.75rem 2rem;
+  justify-content: space-between;
   width: 100%;
+  padding: 1.75rem 2rem;
 }
 
 .header__menu {
-  border-color: transparent;
-  outline: transparent;
-  background: transparent;
-  cursor: pointer;
   padding: 8px;
+  cursor: pointer;
+  outline: transparent;
+  border-color: transparent;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   background-color: rgb(220, 20, 60);
@@ -101,49 +100,49 @@ export default {
 }
 
 .nav__menu {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
   width: 100%;
   height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   overflow: hidden;
   transition: all 0.3s ease-in;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav_list {
   width: 100%;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
   background-color: #fff;
 }
 
 .nav__links {
   display: block;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
   width: max-content;
   padding: 1rem 0.375rem;
   font: 1rem;
   font-weight: 900;
   letter-spacing: 0.0625rem;
-  transition: all 0.3s ease-in;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 .nav__links:after {
   content: "";
   display: block;
-  transition: all ease-in-out 0.3s;
-  background: none repeat scroll 0 0 rgb(220, 20, 60);
-  height: 4px;
-  border-radius: 20px;
   width: 0;
+  height: 4px;
   margin: 0 auto;
+  border-radius: 20px;
+  background: none repeat scroll 0 0 rgb(220, 20, 60);
+  transition: all ease-in-out 0.3s;
 }
 .nav__links:hover:after {
   width: 100%;
@@ -159,48 +158,49 @@ export default {
   .header__content {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.6rem 0;
     width: 91%;
+    padding: 0.6rem 0;
   }
+
   .header__nav {
-    padding: 0;
     width: auto;
+    padding: 0;
     background-color: transparent;
   }
+
   .header__menu {
     display: none;
   }
+
   .nav {
     width: max-content;
   }
+
   .nav__menu {
     position: static;
-    height: auto !important;
     width: max-content;
+    height: auto !important;
     background-color: transparent;
   }
+
   .nav__triangle {
     display: none;
   }
+
   .nav__list {
-    background-color: transparent;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
     gap: 3.125rem;
+    background-color: transparent;
   }
+
   .nav__list li {
     margin: 0;
   }
+
   .nav__links {
     color: #fff;
-  }
-  .nav__button {
-    background-color: #fff;
-  }
-  .nav__button:hover {
-    color: #fff;
-    background-color: hsla(200, 100%, 72%, 1);
   }
 }
 
