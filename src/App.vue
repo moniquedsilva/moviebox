@@ -40,7 +40,7 @@
         </div>
       </section>
     </main>
-    <Footer :title="title" :text="text" :url="url">
+    <Footer :title="title" :url="url">
       <div class="text-white">305</div>
     </Footer>
   </div>
@@ -93,9 +93,6 @@ export default {
       return this.info.filter((year) => year.release_date.includes(current));
     },
     title() {
-      return "um title";
-    },
-    text() {
       return "Já imaginou ter o controle total de sua vida jurídica? Acompanhe os seus processos e seja frequentemente atualizado sempre que ocorrerem movimentações. Vem aproveitar o melhor assistente jurídico do Brasil junto comigo com 50% de desconto 💛";
     },
     url() {
