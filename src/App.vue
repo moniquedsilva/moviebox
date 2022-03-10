@@ -40,8 +40,8 @@
         </div>
       </section>
     </main>
-    <Footer>
-      <div :title="title" :text="text" :url="url" class="text-white">305</div>
+    <Footer :title="title" :text="text" :url="url">
+      <div class="text-white">305</div>
     </Footer>
   </div>
 </template>
