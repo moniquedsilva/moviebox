@@ -41,7 +41,7 @@
       </section>
     </main>
     <Footer>
-      <div :title="title" :url="convidarLink" class="text-white">305</div>
+      <div :title="title" :url="url" class="text-white">305</div>
     </Footer>
   </div>
 </template>
@@ -95,7 +95,7 @@ export default {
     title() {
       return "Já imaginou ter o controle total de sua vida jurídica? Acompanhe os seus processos e seja frequentemente atualizado sempre que ocorrerem movimentações. Vem aproveitar o melhor assistente jurídico do Brasil junto comigo com 50% de desconto 💛";
     },
-    convidarLink() {
+    url() {
       return "https://www.escavador.com/";
     },
   },
