@@ -40,16 +40,18 @@
         </div>
       </section>
     </main>
-    <Footer />
+    <Footer>
+      <div :title="title" :url="convidarLink" class="text-white">305</div>
+    </Footer>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import Cards from '@/components/Cards'
-import Footer from '@/components/Footer'
+import axios from "axios";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Cards from "@/components/Cards";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
@@ -63,35 +65,41 @@ export default {
       info: null,
       loading: true,
       tvShow: null,
-    }
+    };
   },
   mounted() {
     axios
       .get(
-        'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1'
+        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
       )
       .then((response) => (this.info = response.data.results))
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       })
-      .finally(() => (this.loading = false))
+      .finally(() => (this.loading = false));
     axios
       .get(
-        'https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1'
+        "https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
       )
       .then((response) => (this.tvShow = response.data.results))
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       })
-      .finally(() => (this.loading = false))
+      .finally(() => (this.loading = false));
   },
   computed: {
     currentYear() {
-      const current = new Date().getFullYear()
-      return this.info.filter((year) => year.release_date.includes(current))
+      const current = new Date().getFullYear();
+      return this.info.filter((year) => year.release_date.includes(current));
+    },
+    title() {
+      return "Já imaginou ter o controle total de sua vida jurídica? Acompanhe os seus processos e seja frequentemente atualizado sempre que ocorrerem movimentações. Vem aproveitar o melhor assistente jurídico do Brasil junto comigo com 50% de desconto 💛";
+    },
+    convidarLink() {
+      return "https://www.escavador.com/";
     },
   },
-}
+};
 </script>
 
 <style scoped>
